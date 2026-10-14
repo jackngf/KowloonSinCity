@@ -1,0 +1,10 @@
+{
+  "name": "neon-walled-city",
+  "version": "0.1.0",
+  "private": true,
+  "description": "霓虹城寨 graybox prototype — Kowloon Walled City Souls-like",
+  "scripts": {
+    "start": "python3 -m http.server 5173",
+    "serve": "python3 -m http.server 5173"
+  }
+}
