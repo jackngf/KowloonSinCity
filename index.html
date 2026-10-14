@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>霓虹城寨 — 灰盒原型</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div id="bars">
+      <div class="bar-row">
+        <span class="bar-label">生命</span>
+        <div class="bar-track hp"><div id="hp-fill" class="bar-fill"></div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">耐力</span>
+        <div class="bar-track stam"><div id="stam-fill" class="bar-fill"></div></div>
+      </div>
+      <div class="bar-row resources">
+        <span>燈芯 <b id="wick-count">3</b></span>
+        <span>魂火 <b id="soul-count">0</b></span>
+        <span id="weapon-label">武器：鏽廚刀</span>
+      </div>
+    </div>
+    <div id="boss-bar" class="hidden">
+      <div class="boss-name">鎖喉</div>
+      <div class="bar-track boss"><div id="boss-hp-fill" class="bar-fill"></div></div>
+      <div class="bar-track posture"><div id="boss-posture-fill" class="bar-fill"></div></div>
+    </div>
+    <div id="prompt" class="hidden"></div>
+    <div id="toast"></div>
+    <div id="death-overlay" class="hidden">你死咗……寨食咗你一截記憶</div>
+  </div>
+
+  <div id="start-screen">
+    <div class="panel">
+      <h1>霓虹城寨</h1>
+      <p class="subtitle">渠底巷 · 灰盒原型</p>
+      <ul class="controls">
+        <li><kbd>W A S D</kbd> 移動</li>
+        <li><kbd>滑鼠</kbd> 視角（點擊鎖定）</li>
+        <li><kbd>Shift</kbd> 衝刺</li>
+        <li><kbd>滑鼠左鍵</kbd> 輕擊</li>
+        <li><kbd>F</kbd> 重擊</li>
+        <li><kbd>滑鼠右鍵</kbd> 架擋（按住）</li>
+        <li><kbd>Space</kbd> 迴避滾</li>
+        <li><kbd>E</kbd> 互動（篝火／捷徑／撿魂火）</li>
+        <li><kbd>R</kbd> 用香火燈芯回血</li>
+      </ul>
+      <button id="btn-start">進入城寨</button>
+      <p class="hint">耐力空晒就只能慢行。有啲招唔能擋——見到抓取要滾走。</p>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+    <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.170.0/build/three.module.js"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
